@@ -1,0 +1,27 @@
+﻿@model BookViewModel
+
+    <hr />
+ <div class="row justify-content-center m-3">
+    <div class="col-sm-8 col-lg-4">
+        <div class="card">
+            <div class="card-header text-center">
+                <h1>@Model.Name</h1>
+            </div>
+            <div class="card-body text-center">
+                <h4>Book Id : @Model.Id</h4>
+                <h4>Zoner Name : @Model.Zoner</h4>
+                <h4>Release Date : @Model.ReleaseDate</h4>
+                <h4>Total Cost : @Model.Cost</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-8 col-lg-4">
+         <img class="img-thumbnail" style="Width:397px; height:283px" src="/@Model.ImageUrl" alt="Card image cap" >                   
+    </div>
+                <div class="card-footer text-center mt-3">
+                <a asp-controller="BookSelling" asp-action="AddToCart" asp-route-id="@Model.Id" class="btn btn-outline-primary d-grid gap-2 col-6 mx-auto">AddToCart</a>
+                <a asp-action="Index" class="btn btn-outline-secondary d-grid gap-2 col-6 mx-auto mt-2">Back</a>
+                </div>
+
+</div>
